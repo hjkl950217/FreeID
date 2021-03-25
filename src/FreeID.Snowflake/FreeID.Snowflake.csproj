@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\SDKPulishNuget.targets" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Description>$(LibName)下属雪花算法的实现及其相关辅助方法</Description>
+    <PackageProjectUrl>https://github.com/hjkl950217/FreeID</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hjkl950217/FreeID</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FreeID.Abstraction\FreeID.Abstraction.csproj" />
+  </ItemGroup>
+</Project>
