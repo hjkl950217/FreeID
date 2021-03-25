@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeID.Abstraction", "src\FreeID.Abstraction\FreeID.Abstraction.csproj", "{5C616A49-6D12-41E4-9DAD-51CF48ED90D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5FD48088-4806-4704-B632-0D30CC74ABE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1497B41C-CE8F-48B0-AA5C-B5C353F59613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeID.Abstraction.Test", "test\FreeID.Abstraction.Test\FreeID.Abstraction.Test.csproj", "{2CEDAF19-D3FB-427B-86D0-A88FC3CE778F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeID.Snowflake", "src\FreeID.Snowflake\FreeID.Snowflake.csproj", "{607011C0-AF9E-452A-AEB4-A18F427438BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5B92BCC5-3AEE-43E5-957F-793BC15F20B3}"
+	ProjectSection(SolutionItems) = preProject
+		logo.png = logo.png
+		src\SDKPulishNuget.targets = src\SDKPulishNuget.targets
+		test\UT.targets = test\UT.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeID.Snowflake.Test", "test\FreeID.Snowflake.Test\FreeID.Snowflake.Test.csproj", "{1AADB5E6-71B5-41E1-80BF-92B217A87472}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C616A49-6D12-41E4-9DAD-51CF48ED90D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C616A49-6D12-41E4-9DAD-51CF48ED90D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C616A49-6D12-41E4-9DAD-51CF48ED90D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C616A49-6D12-41E4-9DAD-51CF48ED90D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CEDAF19-D3FB-427B-86D0-A88FC3CE778F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CEDAF19-D3FB-427B-86D0-A88FC3CE778F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CEDAF19-D3FB-427B-86D0-A88FC3CE778F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CEDAF19-D3FB-427B-86D0-A88FC3CE778F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{607011C0-AF9E-452A-AEB4-A18F427438BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607011C0-AF9E-452A-AEB4-A18F427438BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607011C0-AF9E-452A-AEB4-A18F427438BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607011C0-AF9E-452A-AEB4-A18F427438BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AADB5E6-71B5-41E1-80BF-92B217A87472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AADB5E6-71B5-41E1-80BF-92B217A87472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AADB5E6-71B5-41E1-80BF-92B217A87472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AADB5E6-71B5-41E1-80BF-92B217A87472}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5C616A49-6D12-41E4-9DAD-51CF48ED90D9} = {5FD48088-4806-4704-B632-0D30CC74ABE0}
+		{2CEDAF19-D3FB-427B-86D0-A88FC3CE778F} = {1497B41C-CE8F-48B0-AA5C-B5C353F59613}
+		{607011C0-AF9E-452A-AEB4-A18F427438BC} = {5FD48088-4806-4704-B632-0D30CC74ABE0}
+		{1AADB5E6-71B5-41E1-80BF-92B217A87472} = {1497B41C-CE8F-48B0-AA5C-B5C353F59613}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06B70766-790F-406E-9B74-DEF1F45430F7}
+	EndGlobalSection
+EndGlobal

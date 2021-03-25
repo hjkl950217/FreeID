@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\SDKPulishNuget.targets" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>$(LibName)的公共定义和基础接口的扩展方法</Description>
+    <PackageProjectUrl>https://github.com/hjkl950217/FreeID</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hjkl950217/FreeID</RepositoryUrl>
+  </PropertyGroup>
+</Project>
