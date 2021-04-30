@@ -54,39 +54,6 @@ namespace System
 
         #endregion To Bytes
 
-        #region To Format String
-
-        #region Byte to String
-
-        /// <summary>
-        /// 将byte转换为对应进制的字符串
-        /// </summary>
-        internal static Func<int, Func<byte, string>> byteToBaseString = tobase => b => Convert.ToString(b, tobase);
-
-        /// <summary>
-        /// 将byte转换为2进制的字符串
-        /// </summary>
-        public static Func<byte, string> byteToBitString = byteToBaseString(2);
-
-        /// <summary>
-        /// 将byte转换为8进制的字符串
-        /// </summary>
-        public static Func<byte, string> byteToOctalString = byteToBaseString(8);
-
-        /// <summary>
-        /// 将byte转换为10进制的字符串
-        /// </summary>
-        public static Func<byte, string> byteToDecimalString = byteToBaseString(10);
-
-        /// <summary>
-        /// 将byte转换为16进制的字符串
-        /// </summary>
-        public static Func<byte, string> byteToHexString = byteToBaseString(16);
-
-        #endregion Byte to String
-
-        #endregion To Format String
-
         #endregion 基础转换
 
         #region 组合转换
