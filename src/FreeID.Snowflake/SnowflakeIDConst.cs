@@ -60,22 +60,22 @@
         /// <summary>
         /// 空雪花ID
         /// </summary>
-        public const long NullID = 0L;
+        public const ulong NullID = 0L;
 
         #endregion 雪花ID常量
 
         #region 文本信息常量
+
+        public const string Lbl_Reserve = "预留位";
+        public const string Lbl_TimeStamp = "时间戳";
+        public const string Lbl_WorkingMachineID = "机器ID";
+        public const string Lbl_SerialNumber = "序列号";
 
         /// <summary>
         /// 文本信息常量
         /// </summary>
         public static class Msg
         {
-            public const string Lbl_Reserve = "预留位";
-            public const string Lbl_TimeStamp = "时间戳";
-            public const string Lbl_WorkingMachineID = "机器ID";
-            public const string Lbl_SerialNumber = "序列号";
-
             public static string InitKeyLgenthError = $"参数错误,所有配置长度相加必须等于{SnowflakeIDConst.Key_Length}";
 
             public const string InitKeyCountError = "参数错误,请检查！配置项目一共有4个";

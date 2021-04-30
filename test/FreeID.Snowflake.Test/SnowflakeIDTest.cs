@@ -11,16 +11,16 @@ namespace FreeID.Snowflake.Test
             public void ReturnZero_WithNullObjectReference()
             {
                 SnowflakeID? snowflakeID = null;
-                long result = snowflakeID.GetIDOrDefault();
-                Assert.Equal(0L, result);
+                ulong result = snowflakeID.GetIDOrDefault();
+                Assert.Equal(0UL, result);
             }
 
             [Fact]
             public void ReturnZero_WithNullSnowflakeID()
             {
                 SnowflakeID? snowflakeID = SnowflakeID.Null;
-                long result = snowflakeID.GetIDOrDefault();
-                Assert.Equal(0L, result);
+                ulong result = snowflakeID.GetIDOrDefault();
+                Assert.Equal(0UL, result);
             }
         }
 
@@ -66,8 +66,8 @@ namespace FreeID.Snowflake.Test
                 Assert.True(a == 10);
                 Assert.True(10 == b);
 
-                long a1 = a;
-                long b1 = b;
+                ulong a1 = a;
+                ulong b1 = b;
                 Assert.True(a1 == b1);
                 Assert.True(a1 == 10);
                 Assert.True(10 == b1);

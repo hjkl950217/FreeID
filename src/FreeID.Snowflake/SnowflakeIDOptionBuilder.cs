@@ -14,27 +14,27 @@ namespace FreeID.Snowflake
 
         public SnowflakeIDOptionBuilder Config_Reserve(byte length)
         {
-            this.TempConfig.AddOrUpdate(SnowflakeIDConst.Msg.Lbl_WorkingMachineID, length);
+            this.TempConfig.AddOrUpdate(SnowflakeIDConst.Lbl_WorkingMachineID, length);
 
             return this;
         }
 
         public SnowflakeIDOptionBuilder Config_TimeStamp(byte length)
         {
-            this.TempConfig.AddOrUpdate(SnowflakeIDConst.Msg.Lbl_TimeStamp, length);
+            this.TempConfig.AddOrUpdate(SnowflakeIDConst.Lbl_TimeStamp, length);
 
             return this;
         }
 
         public SnowflakeIDOptionBuilder Config_WorkingMachineID(byte length)
         {
-            this.TempConfig.AddOrUpdate(SnowflakeIDConst.Msg.Lbl_WorkingMachineID, length);
+            this.TempConfig.AddOrUpdate(SnowflakeIDConst.Lbl_WorkingMachineID, length);
             return this;
         }
 
         public SnowflakeIDOptionBuilder Config_SerialNumber(byte length)
         {
-            this.TempConfig.AddOrUpdate(SnowflakeIDConst.Msg.Lbl_SerialNumber, length);
+            this.TempConfig.AddOrUpdate(SnowflakeIDConst.Lbl_SerialNumber, length);
             return this;
         }
 
@@ -47,23 +47,23 @@ namespace FreeID.Snowflake
             //计算取值范围
             List<Range> config = new List<Range>();
             byte tempMinIndex = 0;
-            foreach (var item in this.TempConfig)
+            foreach (KeyValuePair<string, byte> item in this.TempConfig)
             {
                 switch (item.Key)
                 {
-                    case SnowflakeIDConst.Msg.Lbl_Reserve:
+                    case SnowflakeIDConst.Lbl_Reserve:
                         config.Add(new Range(tempMinIndex, tempMinIndex += item.Value));
                         break;
 
-                    case SnowflakeIDConst.Msg.Lbl_TimeStamp:
+                    case SnowflakeIDConst.Lbl_TimeStamp:
                         config.Add(new Range(tempMinIndex, tempMinIndex += item.Value));
                         break;
 
-                    case SnowflakeIDConst.Msg.Lbl_WorkingMachineID:
+                    case SnowflakeIDConst.Lbl_WorkingMachineID:
                         config.Add(new Range(tempMinIndex, tempMinIndex += item.Value));
                         break;
 
-                    case SnowflakeIDConst.Msg.Lbl_SerialNumber:
+                    case SnowflakeIDConst.Lbl_SerialNumber:
                         config.Add(new Range(tempMinIndex, tempMinIndex += item.Value));
                         break;
 

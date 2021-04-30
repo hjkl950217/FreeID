@@ -8,7 +8,7 @@ namespace FreeID.Snowflake
     /// </summary>
     public sealed partial class SnowflakeID : EqualityComparer<SnowflakeID>
     {
-        //这个文件编码 定义和重载方法  逻辑部分在SnowflakeID.cs
+        //这个文件包含 定义和重载方法  逻辑部分在SnowflakeID.cs
 
         #region 雪花ID组件字段
 
@@ -20,7 +20,7 @@ namespace FreeID.Snowflake
         /// <summary>
         /// 时间戳[默认第2个]
         /// </summary>
-        public long TimeStamp { get; private set; }
+        public ulong TimeStamp { get; private set; }
 
         /// <summary>
         /// 工作机器ID[默认第3个]
@@ -39,12 +39,17 @@ namespace FreeID.Snowflake
         /// <summary>
         /// 雪花ID
         /// </summary>
-        public long ResultID { get; private set; }
+        public ulong ResultID { get; private set; }
+
+        /// <summary>
+        /// 生成雪花ID时的配置
+        /// </summary>
+        public SnowflakeIDOption Option { get; private set; }
 
         /// <summary>
         /// 空ID
         /// </summary>
-        public static long NullID { get => SnowflakeIDConst.NullID; }
+        public static ulong NullID { get => SnowflakeIDConst.NullID; }
 
         /// <summary>
         /// 空ID
@@ -63,10 +68,10 @@ namespace FreeID.Snowflake
         }
 
         /// <summary>
-        /// 从<see cref="long"/>的雪花ID中构造<see cref="SnowflakeID"/>对象
+        /// 从<see cref="ulong"/>的雪花ID中构造<see cref="SnowflakeID"/>对象
         /// </summary>
         /// <param name="snowflakeID">已有的<see cref="long"/>型雪花ID</param>
-        public SnowflakeID(long snowflakeID) : this(snowflakeID, SnowflakeIDOption.Default)
+        public SnowflakeID(ulong snowflakeID) : this(snowflakeID, SnowflakeIDOption.Default)
         {
             //这里的this跳到SnowflakeID.cs的代码
         }
@@ -77,26 +82,26 @@ namespace FreeID.Snowflake
 
         public static bool operator ==(SnowflakeID v1, SnowflakeID v2)
         {
-            return EqualityComparer<long>.Default.Equals(
+            return EqualityComparer<ulong>.Default.Equals(
                 v1.GetIDOrDefault(),
                 v2.GetIDOrDefault());
         }
 
         public static bool operator !=(SnowflakeID v1, SnowflakeID v2)
         {
-            return !EqualityComparer<long>.Default.Equals(
+            return !EqualityComparer<ulong>.Default.Equals(
                 v1.GetIDOrDefault(),
                 v2.GetIDOrDefault());
         }
 
         #region 隐式转换
 
-        public static implicit operator SnowflakeID(long value)
+        public static implicit operator SnowflakeID(ulong value)
         {
             return new(value);
         }
 
-        public static implicit operator long(SnowflakeID value)
+        public static implicit operator ulong(SnowflakeID value)
         {
             return value.GetIDOrDefault();
         }
@@ -129,7 +134,7 @@ namespace FreeID.Snowflake
 
         public override bool Equals(SnowflakeID x, SnowflakeID y)
         {
-            return EqualityComparer<long>.Default.Equals(
+            return EqualityComparer<ulong>.Default.Equals(
                 x.GetIDOrDefault(),
                 y.GetIDOrDefault());
         }
